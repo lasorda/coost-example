@@ -3,10 +3,8 @@
 #include <random>
 #include <string>
 #include <vector>
-#include "co/all.h"
-#include "co/co.h"
-#include "co/co/wait_group.h"
-#include "hiredis/hiredis.h"
+#include <co/all.h>
+#include <hiredis.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -49,7 +47,7 @@ auto main(int argc, char *argv[]) -> int {
     go([&]() {
         for (int i = 0; i < 200; i++) {
             // 连接Redis服务器
-            redisContext *c = redisConnect("9.135.11.101", 32771);
+            redisContext *c = redisConnect("9.135.11.101", 32772);
             if (c == nullptr || c->err) {
                 if (c) {
                     cerr << "Error: " << c->errstr << endl;
