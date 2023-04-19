@@ -6,6 +6,8 @@ enable_testing()
 
 add_executable(coost-example main.cpp)
 
+# this must be before hiredis, libco need static link
+# check with ldd
 add_subdirectory(./coost)
 target_link_libraries(coost-example co)
 
