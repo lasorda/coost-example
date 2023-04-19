@@ -1,0 +1,6 @@
+[submodule "hiredis"]
+	path = hiredis
+	url = https://github.com/redis/hiredis.git
+[submodule "coost"]
+	path = coost
+	url = https://github.com/idealvin/coost.git
